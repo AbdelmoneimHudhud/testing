@@ -12,6 +12,7 @@ POST
     - cookie: {cookie}  
 
 * **body**:  
+```
 [  
     {  
         id: {ITS_ID},  
@@ -21,6 +22,6 @@ POST
         code: {CODE}  
     }  
 ]  
- 
+```
 * **example**:  
 `https://api-staging.yamsafer.me/properties/12916/surcharges`  
