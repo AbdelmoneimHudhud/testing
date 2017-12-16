@@ -29,13 +29,11 @@ https:{BACKEND_API}/properties/{PROPERTY_ID}/orders/?{FILTER_CRITERIA}_start={ST
     - checkin_date
     - checkout_date
 
-* **sort options** :  
-
-As in the list for the first request.
+* **sort options** :As in the list for the first request.
 
 * **request type**:  
 GET  
 
 * **example**:  
-https://api-staging.yamsafer.me/properties/12916/orders/?checkout_date_end=2017-12-17&checkout_date_start=2017-12-16&limit=50&order=created_date&page=1&sort=dsc
+https://api-staging.yamsafer.me/properties/12916/orders/?checkout_date_end=2017-12-17&checkout_date_start=2017-12-16&limit=50&order=created_date&page=1&sort=dsc&api_key=bfdd9c41d51bfdd04bdb096631ed8e3f
 
