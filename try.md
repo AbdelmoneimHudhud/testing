@@ -1,4 +1,6 @@
-## Set properties details api
+## Set properties payments api
+> Basicaly it's same as the set property details api, but here you put the payments ids in the payments array , example : `payments:["188"]`  
+
 
 * **url**:  
 `https://{BACKEND_URL}/properties/{PROPERTY_ID}`
@@ -27,7 +29,7 @@ PUT
     - ar: ```{  
         address: {ADDRESS},  
         description: {DESCRIPTION},  
-        id: {ID}.  
+        id: {ID},  
         locale: 'ar',  
         name: {PROPERTY_NAME},  
         property_id: {PROPERTY_ID},  
