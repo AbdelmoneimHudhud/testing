@@ -1,8 +1,8 @@
 ## Login api
 
-* url:
+* **url**:
 https://{BACKEND_API}.yamsafer.me/en/users/login
 
-* request type:
+* **request type**:
 POST
 
