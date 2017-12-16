@@ -6,6 +6,11 @@ https://{BACKEND_API}.yamsafer.me/en/users/login
 * **request type**:
 POST
 
-`<addr>` element here instead.
-
+```javascript
+function fancyAlert(arg) {
+  if(arg) {
+    $.facebox({div:'#foo'})
+  }
+}
+```
 
