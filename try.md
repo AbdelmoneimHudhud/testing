@@ -24,34 +24,34 @@ PUT
     - propertyID: {PROPERTY_ID}
     - stars: {STARS}
     - type: {PROPERTY_TYPE}
-    - ar: {// arabic data
-        address: {ADDRESS},
-        description: {DESCRIPTION},
-        id: {ID}.
-        locale: 'ar',
-        name: {PROPERTY_NAME},
-        property_id: {PROPERTY_ID},
-        should_follow: 0 || 1,
-        slug: {slug}
-    },
-    - en: {// english data
-        address: {ADDRESS},
-        description: {DESCRIPTION},
-        id: {ID}.
-        locale: 'en',
-        name: {PROPERTY_NAME},
-        property_id: {PROPERTY_ID},
-        should_follow: 0 || 1,
-        slug: {slug}
-    }
-    - images: [
-        {
-            category: normal || cover
-             id: {IMAGE_ID}
-            path: {IMAGE_PATH}
-             rank: {IMAGE_RANK}
-        },
-    ]
+    - ar: {// arabic data  
+        address: {ADDRESS},  
+        description: {DESCRIPTION},  
+        id: {ID}.  
+        locale: 'ar',  
+        name: {PROPERTY_NAME},  
+        property_id: {PROPERTY_ID},  
+        should_follow: 0 || 1,  
+        slug: {slug}  
+    },  
+    - en: {// english data  
+        address: {ADDRESS},  
+        description: {DESCRIPTION},  
+        id: {ID}.  
+        locale: 'en',  
+        name: {PROPERTY_NAME},  
+        property_id: {PROPERTY_ID},  
+        should_follow: 0 || 1,  
+        slug: {slug}  
+    }  
+    - images: [  
+        {  
+            category: normal || cover  
+             id: {IMAGE_ID}  
+            path: {IMAGE_PATH}  
+             rank: {IMAGE_RANK}  
+        },  
+    ]  
 * **example**:  
 `https://api-staging.yamsafer.me/properties/12916`  
 
