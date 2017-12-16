@@ -1,21 +1,11 @@
-## Get user's hash api
+## Get properties types api
 
 * **url**:  
-`https://{EXTRANET_URL}/api/user/{USER_EMAIL}`
+`https://{BACKEND_URL}/en/admin/properties/types`
 
-* **extranet url options** :  
-    - extranet.yamsafer.me
-    - extranet-prealpha.yamsafer.me
 
 * **request type**:  
 GET  
 
-* **headers**:
-
-    - authority:{EXTRANET_URL_OPTION}
-    - referer:{EXTRANET_URL_OPTION}/orders
-    - user-agent: {USER_AGENT}
-    - if-none-match: "1276327429"
-
 * **example**:  
-https://extranet-prealpha.yamsafer.me/api/user/walaa@yamsafer.me  
+https://api-staging.yamsafer.me/en/admin/properties/types
