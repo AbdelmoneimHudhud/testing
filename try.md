@@ -24,7 +24,7 @@ PUT
     - propertyID: {PROPERTY_ID}
     - stars: {STARS}
     - type: {PROPERTY_TYPE}
-    - ar: {  
+    - ar: ```{  
         address: {ADDRESS},  
         description: {DESCRIPTION},  
         id: {ID}.  
@@ -33,8 +33,8 @@ PUT
         property_id: {PROPERTY_ID},  
         should_follow: 0 || 1,  
         slug: {slug}  
-    },  
-    - en: ```{// english data  
+    }```  
+    - en: ```{  
         address: {ADDRESS},  
         description: {DESCRIPTION},  
         id: {ID}.  
