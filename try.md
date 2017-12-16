@@ -4,16 +4,16 @@
 * **url**:  
 https://{BACKEN_API}.yamsafer.me/properties/{PROPERTY_ID}/orders/recent?limit={LIMIT}&order={asc|desc}&page=1&sort={SORT_OPTION}  
 
-**sort options** :  
+* **sort options** :  
 
-- confirmation_code
-- customer.first_name
-- created_at
-- checkin_date
-- checkout_date
-- nights
-- taxed_total_price
-- status_description
+    - confirmation_code
+    - customer.first_name
+    - created_at
+    - checkin_date
+    - checkout_date
+    - nights
+    - taxed_total_price
+    - status_description
 
 * **request type**:  
 GET  
