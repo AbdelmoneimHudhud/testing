@@ -34,7 +34,7 @@ PUT
         should_follow: 0 || 1,  
         slug: {slug}  
     },  
-    - en: {// english data  
+    - en: ```{// english data  
         address: {ADDRESS},  
         description: {DESCRIPTION},  
         id: {ID}.  
@@ -43,15 +43,15 @@ PUT
         property_id: {PROPERTY_ID},  
         should_follow: 0 || 1,  
         slug: {slug}  
-    }  
-    - images: [  
+    }  ```
+    - images: ``[  
         {  
             category: normal || cover  
              id: {IMAGE_ID}  
             path: {IMAGE_PATH}  
              rank: {IMAGE_RANK}  
         },  
-    ]  
+    ]  ```
 * **example**:  
 `https://api-staging.yamsafer.me/properties/12916`  
 
