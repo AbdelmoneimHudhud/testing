@@ -24,7 +24,7 @@ PUT
     - propertyID: {PROPERTY_ID}
     - stars: {STARS}
     - type: {PROPERTY_TYPE}
-    - ar: {// arabic data  
+    - ar: {  
         address: {ADDRESS},  
         description: {DESCRIPTION},  
         id: {ID}.  
@@ -44,7 +44,7 @@ PUT
         should_follow: 0 || 1,  
         slug: {slug}  
     }  ```
-    - images: ``[  
+    - images: ```[  
         {  
             category: normal || cover  
              id: {IMAGE_ID}  
