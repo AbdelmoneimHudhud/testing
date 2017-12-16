@@ -1,59 +1,26 @@
-## Set properties payments api
-> Basicaly it's same as the set property details api, but here you put the payments ids in the payments array , example : `payments:["188"]`  
-
+## Set properties surcharges api
 
 * **url**:  
-`https://{BACKEND_URL}/properties/{PROPERTY_ID}`
+`https://{BACKEND_URL}/properties/{PROPERTY_ID}/surcharges`
 
 
 * **request type**:  
-PUT  
+POST  
 
 * **headers**:
     - Accept: 'application/json'
     - cookie: {cookie}  
 
-* **body**:
-    - currency_code: {CURRENCY_CODE}
-    - cvc: true || false
-    - is_cardless: true || false
-    - latitude: {LATITUDE}
-    - longitude: {LONGITUDE}
-    - low_rate: {LOW_RATE}
-    - number_of_accommodations: null
-    - payments: []
-    - postal_code: {POSTAL_CODE}
-    - propertyID: {PROPERTY_ID}
-    - stars: {STARS}
-    - type: {PROPERTY_TYPE}
-    - ar: ```{  
-        address: {ADDRESS},  
-        description: {DESCRIPTION},  
-        id: {ID},  
-        locale: 'ar',  
-        name: {PROPERTY_NAME},  
-        property_id: {PROPERTY_ID},  
-        should_follow: 0 || 1,  
-        slug: {slug}  
-    }```  
-    - en: ```{  
-        address: {ADDRESS},  
-        description: {DESCRIPTION},  
-        id: {ID}.  
-        locale: 'en',  
-        name: {PROPERTY_NAME},  
-        property_id: {PROPERTY_ID},  
-        should_follow: 0 || 1,  
-        slug: {slug}  
-    }  ```
-    - images: ```[  
-        {  
-            category: normal || cover  
-             id: {IMAGE_ID}  
-            path: {IMAGE_PATH}  
-             rank: {IMAGE_RANK}  
-        },  
-    ]  ```
+* **body**:  
+```[
+    {
+        id: {ITS_ID},
+        is_included: true || false,
+        code: {ITS_CODE},
+        amount_type: percent || amount,
+        code: {CODE}
+    }
+]```
+    
 * **example**:  
-`https://api-staging.yamsafer.me/properties/12916`  
-
+`https://api-staging.yamsafer.me/properties/12916/surcharges`  
