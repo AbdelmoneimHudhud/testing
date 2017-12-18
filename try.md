@@ -1,5 +1,5 @@
 
-##Update a rate template api  
+## Update a rate template api  
 
 * **url**:  
 `https://{BACKEND_API}.yamsafer.me/properties/{PROPERTY_ID}/rates/templates`  
