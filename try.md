@@ -1,44 +1,65 @@
 
-## Set properties policies api
+## Add an accommodation api  
 
 * **url**:  
-`https://{BACKEND_URL}/properties/{PROPERTY_ID}/policies`
-
+`https://{BACKEND_api}.yamsafer.me/properties/{PROPERTY_ID}/accommodations/`  
 
 * **request type**:  
 POST  
 
-* **headers**:
-    - Accept: 'application/json'
-    - cookie: {cookie}  
-
-* **body**:  
-```
-[
-    {
-        characteristic_id: {ID},
-        chargeable: 0 || 1, 
-        price: {PRICE}, 
-        metadata: 
+* **Body**:
+    - accommodation_type: {ACCOMMODATION_TYPE}// you can get the options throug .../accommodations/template api
+    - furnitures: []
+    - images: []
+    - isMultipleUnit: true || false
+    - is_connected: 1 || 0
+    - max_children: {CHILDREN_COUNT}
+    - max_occupancy: {MAX_OCCUPANCY}
+    - occupancy: {OCCUPANCY}
+    - quantity: {QUANTITY}
+    - size: {SIZE}
+    - smoking_preferences: 
+    - suppliers: []
+    - icalendars:  
+        ```
+        {  
+            hash: ''
+        }  
+        ```
+    - facilities:  
+        ```
+        [
             {
-                {META_DATA_KEY}: {META_DATA_DESCRIPTION},
-                {META_DATA_KEY}: {META_DATA_DESCRIPTION},
+                code: {CODE},
+                is_ensuite: true || false,
+                name: {NAME},
+                occupancy: {OCCUPANCY},
+                size: {SIZE},
+                furnitures: 
+                    ```
+                    [
+                        {
+                            code: {CODE},
+                            id: {ID}
+                        }
+                    ]
+                    ```
             }
-    }
-] 
-```
-
-* **meta data key options**:  
-    * 'number_of_beds' for characteristic_id:221 
-    * 'max_age' for characteristic_id: 222 and 220
-    * 'number_of_children' for characteristic_id: 219 and 223
-
-* **meta data descriotion options**:  
-    * 6,7,8,12,16,17:: example: 'children 6 years or younger', for characteristic_id: 222
-    * 'adults', for characteristic_id: 222
-    * 1,2,3:: example: '2 infants', example: '1 infant', for characteristic_id: 219
-    * 1,2,3,4:: example: '3 years or younger', for characteristic_id: 220
-    * 3,4,...,12:: example: '10 years or younger', for characteristic_id: 223
-    * 1,2,3,4:: example: '3 children', for characteristic_id: 223
+        ]
+        ```
+    - ar: 
+        ```
+        {
+            description: {ARABIC_DESCRIPTION},
+            name: {ARABIC_NAME}
+        }
+        ```
+    - en:
+        ```
+        {
+            description: {ENGLISH_DESCRIPTION},
+            name: {ENGLISH_NAME}
+        }
+        ```
 * **example**:  
-`https://api-staging.yamsafer.me/properties/12916/surcharges`  
+`https://api-staging.yamsafer.me/properties/15252/accommodations/`  
