@@ -36,14 +36,12 @@ POST
                 occupancy: {OCCUPANCY},
                 size: {SIZE},
                 furnitures: 
-                    ```
                     [
                         {
                             code: {CODE},
                             id: {ID}
                         }
                     ]
-                    ```
             }
         ]
         ```
