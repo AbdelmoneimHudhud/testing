@@ -1,11 +1,11 @@
 
-## Add rate template api  
+##Update a rate template api  
 
 * **url**:  
 `https://{BACKEND_API}.yamsafer.me/properties/{PROPERTY_ID}/rates/templates`  
 
 * **request type**:  
-POST  
+PUT  
 
 * **headers**:
     - Accept: 'application/json'
@@ -14,7 +14,7 @@ POST
 * **Body**:
     - addButton: true
     - allow_cardless: true || false
-    - code: ''
+    - code: {CODE}
     - id: null
     - is_refundable: true || false
     - name: {NAME}
@@ -32,6 +32,7 @@ POST
         ```
     - benefits: [BENEFIT_ID]
     - payment_method: 2,3 :: 2 => POSTPAID, 3 => DEPOSIT_REQUIRED  
+    - colorCode: {COLOR_CODE}
     
 * **example**:  
 `https://api-staging.yamsafer.me/properties/15252/rates/templates`  
