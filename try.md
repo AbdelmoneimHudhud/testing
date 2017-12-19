@@ -1,38 +1,42 @@
 
-## Update a rate template api  
+## Update rate template availability api 
+> To add a rate template to an accommodation, send the same request with the new rate template details. 
 
 * **url**:  
-`https://{BACKEND_API}.yamsafer.me/properties/{PROPERTY_ID}/rates/templates`  
+`https://{BACKEND_API}.yamsafer.me/properties/{ACCOMM_ID}/accommodations/{ACCOMM_ID}/availabilities`  
 
 * **request type**:  
-PUT  
+POST  
 
 * **headers**:
     - Accept: 'application/json'
     - cookie: {cookie}  
 
 * **Body**:
-    - addButton: true
-    - allow_cardless: true || false
-    - code: {CODE}
-    - id: null
-    - is_refundable: true || false
-    - name: {NAME}
-    - status: true || false
-    - rates: {}
-    - cancellation_policy_object: 
+    - allotment: {ALLOTMENT}
+    - dates:  
         ```
-        [
-            {
-                amount: {AMOUNT}, 1, 100
-                time: {TIME}, // can have one of the following values 24, 48, 72, 168
-                type: {TYPE}, // can have one of the following values 'free', 'night', 'stay'
+        ['date0', ..., 'endDate']// example : ["2017-12-19", "2017-12-20", "2017-12-21"]
+        ```
+    - availabilities: // contains object of the rate template intended to be changed
+        ```
+        {
+            0: {//firt rate templete to be changed
+                occupancy: {OCCUPANCY},
+                promotion_rate: {PROMO_RATE},
+                rate: {RATE},
+                rate_template_id: {RATE_TEMPLATE_ID}
             },
-        ]
+            1: {//second rate template to be chnaged, can be as the same previous rate template          but with different occupancy.
+                occupancy: {OCCUPANCY},
+                promotion_rate: {PROMO_RATE},
+                rate: {RATE},
+                rate_template_id: {RATE_TEMPLATE_ID}
+            },
+        }
         ```
     - benefits: [BENEFIT_ID]
     - payment_method: 2,3 :: 2 => POSTPAID, 3 => DEPOSIT_REQUIRED  
-    - colorCode: {COLOR_CODE}
     
 * **example**:  
-`https://api-staging.yamsafer.me/properties/15252/rates/templates`  
+`https://api-staging-3.yamsafer.me/properties/12188/accommodations/4942/availabilities`  
