@@ -21,13 +21,13 @@ POST
     - availabilities: // contains object of the rate template intended to be changed
         ```
         {
-            0: {//firt rate templete to be changed
+            {//firt rate templete to be changed
                 occupancy: {OCCUPANCY},
                 promotion_rate: {PROMO_RATE},
                 rate: {RATE},
                 rate_template_id: {RATE_TEMPLATE_ID}
             },
-            1: {//second rate template to be chnaged, can be as the same previous rate template but with different occupancy.
+            {//second rate template to be chnaged, can be as the same previous rate template but with different occupancy.
                 occupancy: {OCCUPANCY},
                 promotion_rate: {PROMO_RATE},
                 rate: {RATE},
