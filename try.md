@@ -27,7 +27,7 @@ POST
                 rate: {RATE},
                 rate_template_id: {RATE_TEMPLATE_ID}
             },
-            1: {//second rate template to be chnaged, can be as the same previous rate template            but with different occupancy.
+            1: {//second rate template to be chnaged, can be as the same previous rate template but with different occupancy.
                 occupancy: {OCCUPANCY},
                 promotion_rate: {PROMO_RATE},
                 rate: {RATE},
