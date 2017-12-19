@@ -27,7 +27,7 @@ POST
                 rate: {RATE},
                 rate_template_id: {RATE_TEMPLATE_ID}
             },
-            1: {//second rate template to be chnaged, can be as the same previous rate template          but with different occupancy.
+            1: {//second rate template to be chnaged, can be as the same previous rate template            but with different occupancy.
                 occupancy: {OCCUPANCY},
                 promotion_rate: {PROMO_RATE},
                 rate: {RATE},
@@ -35,8 +35,6 @@ POST
             },
         }
         ```
-    - benefits: [BENEFIT_ID]
-    - payment_method: 2,3 :: 2 => POSTPAID, 3 => DEPOSIT_REQUIRED  
     
 * **example**:  
 `https://api-staging-3.yamsafer.me/properties/12188/accommodations/4942/availabilities`  
