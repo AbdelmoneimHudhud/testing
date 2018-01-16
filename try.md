@@ -1,27 +1,54 @@
-
-## Update property accommodations availability as bulk availability api  
+## Add dynamic rule api
 
 * **url**:  
-`https://{BACKEND_API}.yamsafer.me/properties/{PROPERTY_ID}/availabilities`  
+`https://{BACKEND_API}.yamsafer.me/properties/{PROPERTY_ID}/rates/rules`
+
 
 * **request type**:  
-PUT  
- 
+POST  
+
 * **headers**:
     - Accept: 'application/json'
     - cookie: {cookie}  
 
-* **Body**:
-    - accommodation_ids: 
-        ```
-        ['ACCOMM1_ID', 'ACCOMM1_ID']
-        ```
-    - allotment: {ALLOTMENT}
-    - force: null
-    - dates:
-        ```
-        ['date0', ..., 'endDate']// example : ["2017-12-19", "2017-12-20", "2017-12-21"]
-        ```
-    
+> There are 4 types of rules and each rule has several options.  
+> Example on adding a Same day booking rule so rate turns to be cardless.   
+
+* **body**:  
+    ```
+    {  
+        action: 
+        {
+            is_cardless: true,
+            is_prepaid: false,
+            remarks: "RATE_BECOMES_CARDLESS",
+        },
+        actionCode: "RATE_BECOMES_CARDLESS",
+        bwTime: {bwTime},
+        daysList: {
+        1:{title: "MON"}
+        2:{title: "TUE", status: true}
+        3:{title: "WED"}
+        4:{title: "THU"}
+        5:{title: "FRI"}
+        6:{title: "SAT"}
+        7:{title: "SUN"}
+        },
+
+        dates:{},
+        expanded: false,
+        expandedActions: {},//here your can do an example on extranet with expanded action,
+        id: null,
+        is_published: true,// set value to false, rule will be created but unpublished,
+        moreConditions: false,
+        rates_templates: [], //array of rate templates ids to apply rule on,
+        trigger: 
+        {
+            time: 3, // notice value in other examples
+        },
+        type:"BOOKING_WINDOW",
+    },  
+    ```
+
 * **example**:  
-`https://api-staging-3.yamsafer.me/properties/12188/availabilities`  
+`https://api.yamsafer.me/properties/411296/rates/rules/`  
